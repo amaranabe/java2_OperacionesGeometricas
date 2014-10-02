@@ -3,24 +3,37 @@
  */
 
 package com.zubiri.geometria;
-public class Circulo {
+public class Circulo 
+{
 
+		//Creo método set y get para...
+		private double radio = -1;
 
-//Metodo que calcula el area.
- public double area (double radio) {
+		public double getRadio() 
+		{
+						return radio;
+		} 
+		 
+		public void setRadio (double _radio) 
+		 {
+						radio=_radio;
+		 } 
 
-	double result;
-	result	= 3.1415 * radio * radio;
-	return result;
- }
+		//Metodo que calcula el area.
+		 public double area () 
+		 {
+			double result;
+			result	= 3.1415 * radio * radio;
+			return result;
+		 }
 
-//Metodo que calcula la circunferencia.
- public double circunf (double radio) {
-
-	double result;
-	result = 2 * radio * 3.1415;
-	return result;
- }
- 
+		//Metodo que calcula la circunferencia.
+		 public double circunf () 
+		 {
+			double result;
+			result = 2 * radio * 3.1415;
+			return result;
+		 }
+		 
  }
 
