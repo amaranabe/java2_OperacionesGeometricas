@@ -5,25 +5,30 @@
 package com.zubiri.geometria;
 public class Circulo 
 {
+	public static double PI=3.1415;
+	private double radio;
+	
+	public Circulo (double valorRadio)
+	{
+		radio=valorRadio;
+	}
 
 		//Creo método set y get para...
-		private double radio = -1;
-
 		public double getRadio() 
 		{
-						return radio;
+				return radio;
 		} 
 		 
 		public void setRadio (double _radio) 
 		 {
-						radio=_radio;
+				radio=_radio;
 		 } 
 
 		//Metodo que calcula el area.
 		 public double area () 
 		 {
 			double result;
-			result	= 3.1415 * radio * radio;
+			result	= PI * radio * radio;
 			return result;
 		 }
 
@@ -31,7 +36,7 @@ public class Circulo
 		 public double circunf () 
 		 {
 			double result;
-			result = 2 * radio * 3.1415;
+			result = 2 * radio * PI;
 			return result;
 		 }
 		 

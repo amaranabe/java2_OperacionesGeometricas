@@ -15,24 +15,24 @@ public class OperacionesGeometricas
 				
 	//1.Pedir los datos al usuario
 		
-		System.out.print("\n¿Qué figura geométrica quieres, circulo o rectángulo?: "); //Utilizo 			la salida estandar (stdout) (pantalla)
+		System.out.print("\nQue figura geométrica quieres, circulo o rectangulo?: "); //Utilizo la salida estandar (stdout) (pantalla)
 		
 	//2.Leer datos que introduce el usuario
 		Scanner sc;
-		sc = new Scanner(System.in);//Reservar espacio en memoria para una variable de clase. 			Tiene una función que permite leer lo que se introduce por el teclado
+		sc = new Scanner(System.in);//Reservar espacio en memoria para una variable de clase. Tiene una funcion que permite leer lo que se introduce por el teclado
 		String figura; //reservo espacio para la referencia figura
-		figura = new String(); //reservo el espacio para un variable de tipo String, y le asigno 			a figura (así "figura" referencia a ese espacio, esto es, accedemos a ese espacio
+		figura = new String(); //reservo el espacio para un variable de tipo String, y le asigno a figura (asi "figura" referencia a ese espacio, esto es, accedemos a ese espacio
 		figura=sc.nextLine();
 		//llamo al metodo nextLine de la clase scanner (previamente) reservada y asigno el valor que devuelve al objeto figura
 		
-		double radio, base, altura;
-	//3.Decir qué hacer con esos datos
+		double radio=0, base=0, altura=0;
+	//3.Decir que hacer con esos datos
 		if (figura.equalsIgnoreCase("circulo"))  
 		{
 
-			com.zubiri.geometria.Circulo operaciones = new com.zubiri.geometria.Circulo();//disponible la variable			
+			com.zubiri.geometria.Circulo operaciones = new com.zubiri.geometria.Circulo(radio);//disponible la variable			
 			System.out.print("\nHas elegido circulo"); 
-			System.out.print("\n¿Cúal es el radio?");
+			System.out.print("\nCual es el radio?");
 			radio = sc.nextDouble();
 		
 			operaciones.setRadio(radio);//aqui le da el valor del radio (HAY Q APLICAR SET Y GET EN LA CLASE CIRCULO)
@@ -43,15 +43,15 @@ public class OperacionesGeometricas
 			System.out.println("\nEl resultado del AREA es: " + resultadoArea);
 			System.out.println("\nEl resultado de la CIRCUNFERENCIA es: " + resultadoCircunferencia);
 		}
-		else 
+		else
 		{
 			System.out.print("\nHas elegido rectangulo"); 
-			System.out.print("\n¿Cuál es la base?: ");
+			System.out.print("\nCual es la base?: ");
 			base = sc.nextDouble();
-			System.out.print("\n¿Cuál es la altura?: ");
+			System.out.print("\nCual es la altura?: ");
 			altura = sc.nextDouble();
 			
-			com.zubiri.geometria.Rectangulo operaciones = new com.zubiri.geometria.Rectangulo();
+			com.zubiri.geometria.Rectangulo operaciones = new com.zubiri.geometria.Rectangulo(base, altura);
 			operaciones.setBase(base);
 			operaciones.setAltura(altura);
 			

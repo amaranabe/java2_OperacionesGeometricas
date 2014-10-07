@@ -1,5 +1,5 @@
 /*
- * Clase para obtener resultados del perímetro y área de un rectangulo.
+ * Clase para obtener resultados del perimetro y area de un rectangulo.
  */
 package com.zubiri.geometria;
 public class Rectangulo 
@@ -8,7 +8,11 @@ public class Rectangulo
 		private double base = -1;
 		private double altura = -1;
 				
-
+		public Rectangulo (double valorBase, double valorAltura)
+		{
+				base=valorBase;
+				altura=valorAltura;
+		}
 				public double getBase() 
 				{
 								return base;
@@ -25,7 +29,7 @@ public class Rectangulo
 				{
 								altura=_altura;
 				}
-				//Metodo que calcula el perímetro.
+				//Metodo que calcula el perimetro.
 				 public double perimetro () 
 				 {
 								double result;
